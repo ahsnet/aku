@@ -2,7 +2,7 @@
 
 clear 
 echo ""
-echo "-----------MENGECEK USERlOGIN BY KERDUNET.TOP-----------"
+echo "-----------MENGECEK USERlOGIN-----------"
 echo ""
 data=( `ps aux | grep -i dropbear | awk '{print $2}'`);
 echo "-----------------------------------------";
@@ -40,6 +40,6 @@ echo "Untuk kill user log in, gunakan command  ";
 echo "kill -9 (nomerid)                        ";
 echo "contoh : kill -9 28651 ";
 echo "-----------------------------------------";
-echo "----------  www.kerdunet.top  -----------";
+echo "----------  JUCKY VENGEANCE   -----------";
 echo "-----------------------------------------";
 
