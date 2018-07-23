@@ -1,8 +1,8 @@
 #!/bin/bash
-# 082210988552
+# 
 clear
 echo ""
-echo "---------------MENGECEK USER YANG LOGIN BY KERDUNET.TOP----------------"
+echo "---------------MENGECEK USER YANG LOGIN ----------------"
 echo ""
 
 data=( `ps aux | grep -i dropbear | awk '{print $2}'`);
