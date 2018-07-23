@@ -1,8 +1,8 @@
 #!/bin/bash
-# 082210988552
+# 
 clear
 echo ""
-echo "-----------------MENGECEK SEMUA AKUN BY KERDUNET.TOP-----------------"
+echo "-----------------MENGECEK SEMUA AKUN-----------------"
 echo ""
 echo "-------------------------------"
 echo "USERNAME        TANGGAL EXPIRED"
