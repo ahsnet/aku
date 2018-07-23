@@ -1,9 +1,9 @@
 #!/bin/bash
 #Script Perpanjang User SSH
-#082210988552
+#
 clear
 echo ""
-echo "--------------RENEW USER BY KERDUNET.TOP-------------"
+echo "--------------RENEW AKUN SSH-------------"
 echo ""
 read -p "Username : " Login
 read -p "Password Baru : " Pass
