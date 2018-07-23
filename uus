@@ -1,5 +1,3 @@
-
-text/x-generic add-user ( Bourne-Again shell script, ASCII text executable, with CRLF line terminators )
 #!/bin/bash
 
 
