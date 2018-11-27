@@ -24,6 +24,12 @@ socket = r:TCP_NODELAY=1
 accept = 443
 connect = 127.0.0.1:777
 
+[openvpn]
+client = no
+accept = 444
+connect = 127.0.0.1:1194
+cert = /etc/stunnel/stunnel.pem
+
 END
 #pemisiom
 mkdir /var/run/stunnel
