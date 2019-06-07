@@ -33,6 +33,6 @@ for((i=1; i<=$totalaccounts; i++ ))
                 fi
        else
        echo " User : $username Expire tanggal : $tgl $bulantahun" >> /root/expireduser.txt
-       userdel $username
+       userdel -r -f $username
        fi
 done
