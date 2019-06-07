@@ -36,3 +36,4 @@ for((i=1; i<=$totalaccounts; i++ ))
        userdel -r -f $username
        fi
 done
+echo ""
