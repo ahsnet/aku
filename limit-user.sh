@@ -76,7 +76,7 @@ case $PARAM in
 3)
 	echo -n > /tmp/user1
 	echo -n > /tmp/user2
-  echo -n > /tmp/user3
+        echo -n > /tmp/user3
 	cat /tmp/pid2 | while read line;do
 		set -- $line
 		p=$1
@@ -88,7 +88,7 @@ case $PARAM in
 			cat /tmp/user2 | grep -i $u > /dev/null
 			if [ $? = 1 ]; then
 				echo $line >> /tmp/user2
-     else
+                        else
 			cat /tmp/user3 | grep -i $u > /dev/null
 			if [ $? = 1 ]; then
 				echo $line >> /tmp/user3
@@ -97,6 +97,7 @@ case $PARAM in
 				echo "kill $p user $u"
 			fi
 		fi
+		fi
 	done
 	rm -f /tmp/pid
 	rm -f /tmp/pid2
@@ -104,7 +105,7 @@ case $PARAM in
 	rm -f /tmp/sks
 	rm -f /tmp/user1
 	rm -f /tmp/user2
-  rm -f /tmp/user3
+	rm -f /tmp/user3
 	exit 0
 ;;
 *)
