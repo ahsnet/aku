@@ -7,6 +7,11 @@ cat /tmp/pid | grep -i 'dropbear -p' > /tmp/pids
 cat /var/log/auth.log |  grep -i "Password auth succeeded" > /tmp/sks
 perl -pi -e 's/Password auth succeeded for//g' /tmp/sks
 perl -pi -e 's/dropbear//g' /tmp/sks
+ps ax|grep sshd > /tmp/pid
+cat /tmp/pid | grep -i 'sshd -p' > /tmp/pids
+cat /var/log/secure |  grep -i "Accepted password for" > /tmp/sks
+perl -pi -e 's/Accepted password for//g' /tmp/sks
+perl -pi -e 's/sshd//g' /tmp/sks
 
 cat /tmp/pid | while read line;do
 	set -- $line
