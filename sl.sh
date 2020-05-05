@@ -1,12 +1,3 @@
-#detail nama perusahaan
-country=ID
-state=JAGOANSSH.COM
-locality=JAGOANSSH.COM
-organization=JAGOANSSH.COM
-organizationalunit=JAGOANSSH.COM
-commonname=JAGOANSSH.COM
-email=JAGOANSSH.COM
-
 # go to root
 cd
 
