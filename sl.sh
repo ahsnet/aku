@@ -27,7 +27,7 @@ connect = 127.0.0.1:777
 [openvpn]
 client = no
 accept = 444
-connect = 127.0.0.1:1194
+connect = 127.0.0.1:442
 cert = /etc/stunnel/stunnel.pem
 
 END
@@ -36,10 +36,8 @@ mkdir /var/run/stunnel
 chown nobody:nobody /var/run/stunnel
 
 #membuat sertifikat
-openssl genrsa -out key.pem 2048
-openssl req -new -x509 -key key.pem -out cert.pem -days 1095 \
--subj "/C=$country/ST=$state/L=$locality/O=$organization/OU=$organizationalunit/CN=$commonname/emailAddress=$email"
-cat key.pem cert.pem >> /etc/stunnel/stunnel.pem
+wget -O /etc/stunnel/stunnel.pem "https://raw.githubusercontent.com/95dewadew/ooo/master/cert.pm"
+chmod +x /etc/stunnel/stunnel.pem
 
 #konfigurasi stunnel
 wget -O /etc/rc.d/init.d/stunnel "https://raw.githubusercontent.com/95dewadew/ooo/master/st"
