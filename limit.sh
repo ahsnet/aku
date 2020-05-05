@@ -51,14 +51,3 @@ done
 	rm -f /tmp/user2
 	rm -f /tmp/user3
 	exit 0
-;;
-*)
-	echo " Gunakan perintah user-limit 1 untuk limit 1 login saja"
-	echo " atau user-limit 2  untuk melimit max 2 login"
-	rm -f /tmp/pid
-	rm -f /tmp/pid2
-	rm -f /tmp/pids
-	rm -f /tmp/sks
-	exit 1
-;;
-esac
