@@ -44,7 +44,7 @@ else
 	echo "UdpGw   : 7300"
 	echo "Aktif   : $(date -d "$AKTIF days" +"%d-%m-%Y")"
 	echo "-----------------------------------"
-	echo "Open VPN: http://$MYIP:81/442-client.ovpn"
+	echo "Open VPN: http://$MYIP:81/1194-client.ovpn"
 	echo "Script Edited BY:AHSNET "
 	echo "-----------------------------------"
 fi
