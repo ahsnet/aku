@@ -227,7 +227,7 @@ wget -O mem "https://raw.githubusercontent.com/ahsnet/aku/master/ps_mem.py"
 wget -O userlist "https://raw.githubusercontent.com/ahsnet/aku/master/user-list.sh"
 wget -O hapus "https://raw.githubusercontent.com/ahsnet/aku/master/user-del.sh"
 wget -O user-limit "https://raw.githubusercontent.com/ahsnet/aku/master/limit.sh"
-wget -O delete-user-expire "https://raw.githubusercontent.com/ahsnet/aku/master/matioto"
+wget -O delete-user-expire "https://raw.githubusercontent.com/ahsnet/aku/master/2hari.sh"
 wget -O banned-user "https://raw.githubusercontent.com/95dewadew/ooo/master/tendang2"
 wget -O tls "https://raw.githubusercontent.com/ahsnet/aku/master/sl.sh"
 wget -O userexpire "https://raw.githubusercontent.com/ahsnet/aku/master/autoexpire.sh"
@@ -328,4 +328,4 @@ echo "----------"  | tee -a log-install.txt
 
 echo ""  | tee -a log-install.txt
 echo "==============================================="  | tee -a log-install.txt
-rm -f /root/cent6.sh
+rm -f /root/cent6
