@@ -40,7 +40,7 @@ else
 	echo "SSL/TLS : 443"
 	echo "Dropbear: 110, 109"
 	echo "Openssh : 22, 143"
-  echo "Squid   : 80, 8080, 3128"
+	echo "Squid   : 80, 8080, 3128"
 	echo "Aktif   : $(date -d "$AKTIF days" +"%d-%m-%Y")"
 	echo "-----------------------------------"
 	echo "Open VPN: http://$MYIP:81/442-client.ovpn"
