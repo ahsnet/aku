@@ -22,6 +22,7 @@ MYIP=$(wget -qO- ipv4.icanhazip.com)
 	echo -e "\e[032;1mSystem uptime:\e[0m $up"
 	echo "------------------------------------------------------------------------------"
 	echo "Apa yang ingin Anda lakukan?"
+	echo -e "\e[031;1m 0\e[0m) Trial 1 Hari (\e[34;1mtrial\e[0m)"
 	echo -e "\e[031;1m 1\e[0m) Buat Akun SSH/OpenVPN (\e[34;1muser-add\e[0m)"
 	echo -e "\e[031;1m 2\e[0m) Perpanjang Akun (\e[34;1muser-renew\e[0m)"
 	echo -e "\e[031;1m 3\e[0m) Cek Login (\e[34;1muserlogin\e[0m)"
@@ -44,6 +45,10 @@ MYIP=$(wget -qO- ipv4.icanhazip.com)
 	echo ""
 	read -p "Masukkan pilihan anda, kemudian tekan tombol ENTER: " option1
 	case $option1 in
+		0)
+		clear
+		trial
+		exit
 		1)
 		clear
 		user-add
