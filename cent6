@@ -246,6 +246,8 @@ chmod +x benc
 chmod +x mem
 chmod +x userlist
 chmod +x hapus
+chmod +x speedtest
+chmod +x bench
 chmod +x speedtest_cli.py
 chmod +x delete-user-expire
 chmod +x banned-user
