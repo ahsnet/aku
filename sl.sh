@@ -4,6 +4,7 @@ cd
 # install stunnel
 yum install stunnel
 cat > /etc/stunnel/stunnel.conf <<-END
+pid = /var/run/stunnel.pid
 cert = /etc/stunnel/stunnel.pem
 client = no
 socket = a:SO_REUSEADDR=1
@@ -13,12 +14,12 @@ socket = r:TCP_NODELAY=1
 
 [dropbear]
 accept = 443
-connect = 127.0.0.1:777
+connect = 127.0.0.1:110
 
 [openvpn]
 client = no
 accept = 444
-connect = 127.0.0.1:442
+connect = 127.0.0.1:1194
 cert = /etc/stunnel/stunnel.pem
 
 END
@@ -27,8 +28,9 @@ mkdir /var/run/stunnel
 chown nobody:nobody /var/run/stunnel
 
 #membuat sertifikat
-wget -O /etc/stunnel/stunnel.pem "https://raw.githubusercontent.com/95dewadew/ooo/master/cert.pm"
-chmod +x /etc/stunnel/stunnel.pem
+openssl genrsa -out key.pem 2048
+openssl req -new -x509 -key key.pem -out cert.pem -days 1095
+cat key.pem cert.pem >> /etc/stunnel/stunnel.pem
 
 #konfigurasi stunnel
 wget -O /etc/rc.d/init.d/stunnel "https://raw.githubusercontent.com/95dewadew/ooo/master/st"
