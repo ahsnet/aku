@@ -122,9 +122,9 @@ cd /etc/openvpn/
 wget -O /etc/openvpn/1194-client.ovpn "https://raw.githubusercontent.com/kerdunet/centos/master/openvpn.conf"
 sed -i $MYIP2 /etc/openvpn/1194-client.ovpn;
 PASS=`cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 15 | head -n 1`;
-useradd -M -s /bin/false KerduNet.Top
-echo "Adam:$PASS" | chpasswd
-echo "Adam" > pass.txt
+useradd -M -s /bin/false ahsnet
+echo "ahsnet:$PASS" | chpasswd
+echo "ahsnet" > pass.txt
 echo "$PASS" >> pass.txt
 tar cf client.tar 1194-client.ovpn pass.txt
 cp client.tar /home/vps/public_html/
