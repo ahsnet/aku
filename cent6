@@ -169,10 +169,14 @@ chkconfig sshd on
 
 # install dropbear
 yum -y install dropbear
-echo "OPTIONS=\"-p 109 -p 110\"" > /etc/sysconfig/dropbear
+echo "OPTIONS=\"-b /etc/banner.net -p 109 -p 110\"" > /etc/sysconfig/dropbear
 echo "/bin/false" >> /etc/shells
 service dropbear restart
 chkconfig dropbear on
+
+#banner
+wget -O /etc/banner.net "https://raw.githubusercontent.com/ahsnet/aku/master/banner"
+chmod +x /etc/banner.net
 
 # install vnstat gui
 cd /home/vps/public_html/
