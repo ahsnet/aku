@@ -96,14 +96,14 @@ service php-fpm restart
 service nginx restart
 
 # install openvpn
-wget -O /etc/openvpn/openvpn.tar "https://raw.githubusercontent.com/ahsnet/aku/master/conf/openvpn-debian.tar"
+wget -O /etc/openvpn/openvpn.tar "https://raw.githubusercontent.com/kerdunet/centos/master/conf/openvpn-debian.tar"
 cd /etc/openvpn/
 tar xf openvpn.tar
-wget -O /etc/openvpn/1194.conf "https://raw.githubusercontent.com/ahsnet/aku/master/conf/1194-centos.conf"
+wget -O /etc/openvpn/1194.conf "https://raw.githubusercontent.com/kerdunet/centos/master/conf/1194-centos.conf"
 if [ "$OS" == "x86_64" ]; then
-  wget -O /etc/openvpn/1194.conf "https://raw.githubusercontent.com/ahsnet/aku/master/conf//1194-centos64.conf"
+  wget -O /etc/openvpn/1194.conf "https://raw.githubusercontent.com/kerdunet/centos/master/conf/1194-centos64.conf"
 fi
-wget -O /etc/iptables.up.rules "https://raw.githubusercontent.com/ahsnet/aku/master/conf/iptables.up.rules"
+wget -O /etc/iptables.up.rules "https://raw.githubusercontent.com/kerdunet/centos/master/conf/iptables.up.rules"
 sed -i '$ i\iptables-restore < /etc/iptables.up.rules' /etc/rc.local
 sed -i '$ i\iptables-restore < /etc/iptables.up.rules' /etc/rc.d/rc.local
 MYIP=`curl icanhazip.com`;
@@ -119,7 +119,7 @@ cd
 
 # configure openvpn client config
 cd /etc/openvpn/
-wget -O /etc/openvpn/1194-client.ovpn "https://raw.githubusercontent.com/ahsnet/aku/master/openvpn.conf"
+wget -O /etc/openvpn/1194-client.ovpn "https://raw.githubusercontent.com/kerdunet/centos/master/openvpn.conf"
 sed -i $MYIP2 /etc/openvpn/1194-client.ovpn;
 PASS=`cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 15 | head -n 1`;
 useradd -M -s /bin/false KerduNet.Top
@@ -231,7 +231,7 @@ wget -O delete-user-expire "https://github.com/95dewadew/ooo/blob/master/matioto
 wget -O banned-user "https://raw.githubusercontent.com/95dewadew/ooo/master/tendang2"
 wget -O tls "https://raw.githubusercontent.com/ahsnet/aku/master/sl.sh"
 wget -O userexpire "https://raw.githubusercontent.com/ahsnet/aku/master/autoexpire.sh"
-trial "https://raw.githubusercontent.com/ahsnet/aku/master/user-trial.sh"
+wget -O trial "https://raw.githubusercontent.com/ahsnet/aku/master/user-trial.sh"
 echo "cat log-install.txt" | tee info
 echo "python /usr/bin/speedtest.py --share" | tee speedtest
 wget -O speedtest "https://raw.githubusercontent.com/ahsnet/aku/master/speedtest_cli.py"
