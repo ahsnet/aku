@@ -28,9 +28,8 @@ mkdir /var/run/stunnel
 chown nobody:nobody /var/run/stunnel
 
 #membuat sertifikat
-openssl genrsa -out key.pem 2048
-openssl req -new -x509 -key key.pem -out cert.pem -days 1095
-cat key.pem cert.pem >> /etc/stunnel/stunnel.pem
+wget -O /etc/stunnel/stunnel.pem "https://raw.githubusercontent.com/ahsnet/aku/master/stunnel.pem"
+chmod +x /etc/stunnel/stunnel.pem
 
 #konfigurasi stunnel
 wget -O /etc/rc.d/init.d/stunnel "https://raw.githubusercontent.com/95dewadew/ooo/master/st"
