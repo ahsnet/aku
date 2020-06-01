@@ -15,7 +15,7 @@ echo "SSL/TLS : 443"
 echo "Dropbear: 110, 109"
 echo "Openssh : 22, 143"
 echo "Squid   : 80, 8080, 3128"
-echo "UdpGw   : 7300
+echo "UdpGw   : 7300"
 echo -e ""
 echo -e "Akun ini hanya aktif 1 hari"
 echo -e "============================"
