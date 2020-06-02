@@ -49,6 +49,7 @@ MYIP=$(wget -qO- ipv4.icanhazip.com)
 		clear
 		trial
 		exit
+		;;
 		1)
 		clear
 		user-add
