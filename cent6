@@ -119,12 +119,12 @@ cd
 
 # configure openvpn client config
 cd /etc/openvpn/
-wget -O /etc/openvpn/1194-client.ovpn "https://raw.githubusercontent.com/kerdunet/centos/master/openvpn.conf"
-sed -i $MYIP2 /etc/openvpn/1194-client.ovpn;
+wget -O /etc/openvpn/client.ovpn "https://raw.githubusercontent.com/kerdunet/centos/master/openvpn.conf"
+sed -i $MYIP2 /etc/openvpn/client.ovpn;
 PASS=`cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 15 | head -n 1`;
-tar cf client.tar 1194-client.ovpn pass.txt
+tar cf client.tar client.ovpn pass.txt
 cp client.tar /home/vps/public_html/
-cp 1194-client.ovpn /home/vps/public_html/
+cp client.ovpn /home/vps/public_html/
 
 # install badvpn
 cd
