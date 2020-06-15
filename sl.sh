@@ -32,7 +32,7 @@ wget -O /etc/stunnel/stunnel.pem "https://raw.githubusercontent.com/ahsnet/aku/m
 chmod +x /etc/stunnel/stunnel.pem
 
 #konfigurasi stunnel
-wget -O /etc/rc.d/init.d/stunnel "https://raw.githubusercontent.com/95dewadew/ooo/master/st"
+wget -O /etc/rc.d/init.d/stunnel "https://raw.githubusercontent.com/ahsnet/aku/master/st"
 
 #pemision
 chmod +x /etc/rc.d/init.d/stunnel
