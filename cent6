@@ -86,7 +86,7 @@ cd
 wget -O /etc/nginx/nginx.conf "https://raw.githubusercontent.com/ahsnet/aku/master/conf/nginx.conf"
 sed -i 's/www-data/nginx/g' /etc/nginx/nginx.conf
 mkdir -p /home/vps/public_html
-echo "<pre>Setup by KerduNet.Top [082210988552]</pre>" > /home/vps/public_html/index.html
+echo "<pre>Setup by ahsnet [085746123005]</pre>" > /home/vps/public_html/index.html
 echo "<?php phpinfo(); ?>" > /home/vps/public_html/info.php
 rm /etc/nginx/conf.d/*
 wget -O /etc/nginx/conf.d/vps.conf "https://raw.githubusercontent.com/ahsnet/aku/master/conf/vps.conf"
