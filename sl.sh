@@ -45,4 +45,4 @@ service stunnel start
 #pesan
 echo "SSL/TLS Berhasil di install dengan port 443"
 echo ""
-rm -f sl.sh
+rm -f tls
