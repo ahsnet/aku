@@ -38,14 +38,14 @@ else
 	echo "Username: $username"
 	echo "Password: $password"
 	echo "SSL/TLS : 443"
-	echo "Dropbear: 110, 109"
+	echo "Dropbear: 109, 110"
 	echo "Openssh : 22, 143"
 	echo "Squid   : 80, 8080, 3128"
-	echo "UdpGw   : 7300"
+	echo "UdpGw   : 7000-7900"
 	echo "Aktif   : $(date -d "$AKTIF days" +"%d-%m-%Y")"
 	echo "-----------------------------------"
 	echo "Open VPN: http://$MYIP:81/1194-client.ovpn"
-	echo "Script Edited BY:AHSNET "
+	echo "Script BY:AHSNET "
 	echo "-----------------------------------"
 fi
 
